@@ -7,15 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9168405B336DD2D282FE6300 /* Pods_HelpAnimals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD1A591005AC6CDF8A3CD04 /* Pods_HelpAnimals.framework */; };
+		C317643029BA038800E69495 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317642F29BA038800E69495 /* HomePageViewController.swift */; };
+		C317643229BA03AF00E69495 /* FeedingPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317643129BA03AF00E69495 /* FeedingPointViewController.swift */; };
+		C317643429BA03CA00E69495 /* NewAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317643329BA03CA00E69495 /* NewAddViewController.swift */; };
+		C317643629BA03D900E69495 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317643529BA03D900E69495 /* LocationViewController.swift */; };
+		C317643829BA03E500E69495 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317643729BA03E500E69495 /* SettingsViewController.swift */; };
+		C317643C29BA13C100E69495 /* addFeedingPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317643B29BA13C100E69495 /* addFeedingPointViewController.swift */; };
+		C317643E29BA13DB00E69495 /* addAdoptAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317643D29BA13DB00E69495 /* addAdoptAnimalViewController.swift */; };
+		C317644229BA193D00E69495 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317644129BA193D00E69495 /* DetailViewController.swift */; };
+		C3434B7329D6D42D00D4A877 /* AnimalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3434B7229D6D42D00D4A877 /* AnimalsTableViewCell.swift */; };
 		C373879C29B744F800286DCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C373879B29B744F800286DCB /* AppDelegate.swift */; };
 		C373879E29B744F800286DCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C373879D29B744F800286DCB /* SceneDelegate.swift */; };
 		C37387A029B744F800286DCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C373879F29B744F800286DCB /* ViewController.swift */; };
 		C37387A329B744F800286DCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37387A129B744F800286DCB /* Main.storyboard */; };
 		C37387A529B744F900286DCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37387A429B744F900286DCB /* Assets.xcassets */; };
 		C37387A829B744F900286DCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37387A629B744F900286DCB /* LaunchScreen.storyboard */; };
+		C3DD784129B8A3B100807C73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3DD784029B8A3B100807C73 /* GoogleService-Info.plist */; };
+		C3FECFD029B8CC2C000BE67E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FECFCF29B8CC2C000BE67E /* SignInViewController.swift */; };
+		C3FECFD229B8CCE5000BE67E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FECFD129B8CCE5000BE67E /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		056DEF11C5F8BAF01AB99662 /* Pods-HelpAnimals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelpAnimals.debug.xcconfig"; path = "Target Support Files/Pods-HelpAnimals/Pods-HelpAnimals.debug.xcconfig"; sourceTree = "<group>"; };
+		634640A54BECE1CCC7A1A0ED /* Pods-HelpAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelpAnimals.release.xcconfig"; path = "Target Support Files/Pods-HelpAnimals/Pods-HelpAnimals.release.xcconfig"; sourceTree = "<group>"; };
+		C317642F29BA038800E69495 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		C317643129BA03AF00E69495 /* FeedingPointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedingPointViewController.swift; sourceTree = "<group>"; };
+		C317643329BA03CA00E69495 /* NewAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAddViewController.swift; sourceTree = "<group>"; };
+		C317643529BA03D900E69495 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		C317643729BA03E500E69495 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C317643B29BA13C100E69495 /* addFeedingPointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addFeedingPointViewController.swift; sourceTree = "<group>"; };
+		C317643D29BA13DB00E69495 /* addAdoptAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addAdoptAnimalViewController.swift; sourceTree = "<group>"; };
+		C317644129BA193D00E69495 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C3434B7229D6D42D00D4A877 /* AnimalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsTableViewCell.swift; sourceTree = "<group>"; };
 		C373879829B744F800286DCB /* HelpAnimals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpAnimals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C373879B29B744F800286DCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C373879D29B744F800286DCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +48,10 @@
 		C37387A429B744F900286DCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C37387A729B744F900286DCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C37387A929B744F900286DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3DD784029B8A3B100807C73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C3FECFCF29B8CC2C000BE67E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		C3FECFD129B8CCE5000BE67E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		DAD1A591005AC6CDF8A3CD04 /* Pods_HelpAnimals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelpAnimals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +59,89 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9168405B336DD2D282FE6300 /* Pods_HelpAnimals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63D4B401C92CA2E9FCA0DC43 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				056DEF11C5F8BAF01AB99662 /* Pods-HelpAnimals.debug.xcconfig */,
+				634640A54BECE1CCC7A1A0ED /* Pods-HelpAnimals.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C31A46D329D571BC0013F0CC /* UserLogin */ = {
+			isa = PBXGroup;
+			children = (
+				C3FECFCF29B8CC2C000BE67E /* SignInViewController.swift */,
+				C3FECFD129B8CCE5000BE67E /* SignUpViewController.swift */,
+			);
+			path = UserLogin;
+			sourceTree = "<group>";
+		};
+		C31A46D429D573880013F0CC /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				C317642F29BA038800E69495 /* HomePageViewController.swift */,
+				C3434B7229D6D42D00D4A877 /* AnimalsTableViewCell.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		C31A46D529D573E50013F0CC /* AddNew */ = {
+			isa = PBXGroup;
+			children = (
+				C317643329BA03CA00E69495 /* NewAddViewController.swift */,
+				C317643B29BA13C100E69495 /* addFeedingPointViewController.swift */,
+				C317643D29BA13DB00E69495 /* addAdoptAnimalViewController.swift */,
+			);
+			path = AddNew;
+			sourceTree = "<group>";
+		};
+		C31A46D629D574280013F0CC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C317643729BA03E500E69495 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C31A46D729D574350013F0CC /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				C317643529BA03D900E69495 /* LocationViewController.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		C31A46D829D574530013F0CC /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				C317643129BA03AF00E69495 /* FeedingPointViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		C31A46D929D574890013F0CC /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				C317644129BA193D00E69495 /* DetailViewController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		C373878F29B744F700286DCB = {
 			isa = PBXGroup;
 			children = (
 				C373879A29B744F800286DCB /* HelpAnimals */,
 				C373879929B744F800286DCB /* Products */,
+				63D4B401C92CA2E9FCA0DC43 /* Pods */,
+				F015C87D4BAE6FA8DE8B3FA9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +159,28 @@
 				C373879B29B744F800286DCB /* AppDelegate.swift */,
 				C373879D29B744F800286DCB /* SceneDelegate.swift */,
 				C373879F29B744F800286DCB /* ViewController.swift */,
+				C31A46D929D574890013F0CC /* Details */,
+				C31A46D829D574530013F0CC /* Feed */,
+				C31A46D729D574350013F0CC /* Location */,
+				C31A46D629D574280013F0CC /* Settings */,
+				C31A46D529D573E50013F0CC /* AddNew */,
+				C31A46D429D573880013F0CC /* HomePage */,
+				C31A46D329D571BC0013F0CC /* UserLogin */,
 				C37387A129B744F800286DCB /* Main.storyboard */,
 				C37387A429B744F900286DCB /* Assets.xcassets */,
 				C37387A629B744F900286DCB /* LaunchScreen.storyboard */,
 				C37387A929B744F900286DCB /* Info.plist */,
+				C3DD784029B8A3B100807C73 /* GoogleService-Info.plist */,
 			);
 			path = HelpAnimals;
+			sourceTree = "<group>";
+		};
+		F015C87D4BAE6FA8DE8B3FA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAD1A591005AC6CDF8A3CD04 /* Pods_HelpAnimals.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C37387AC29B744F900286DCB /* Build configuration list for PBXNativeTarget "HelpAnimals" */;
 			buildPhases = (
+				D9A79B2DEEA8750C8DA83DA7 /* [CP] Check Pods Manifest.lock */,
 				C373879429B744F700286DCB /* Sources */,
 				C373879529B744F700286DCB /* Frameworks */,
 				C373879629B744F700286DCB /* Resources */,
+				0DE7E272C8DFC55466F19839 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,20 +245,74 @@
 			files = (
 				C37387A829B744F900286DCB /* LaunchScreen.storyboard in Resources */,
 				C37387A529B744F900286DCB /* Assets.xcassets in Resources */,
+				C3DD784129B8A3B100807C73 /* GoogleService-Info.plist in Resources */,
 				C37387A329B744F800286DCB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0DE7E272C8DFC55466F19839 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelpAnimals/Pods-HelpAnimals-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelpAnimals/Pods-HelpAnimals-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelpAnimals/Pods-HelpAnimals-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9A79B2DEEA8750C8DA83DA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HelpAnimals-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C373879429B744F700286DCB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C317644229BA193D00E69495 /* DetailViewController.swift in Sources */,
+				C3434B7329D6D42D00D4A877 /* AnimalsTableViewCell.swift in Sources */,
+				C3FECFD029B8CC2C000BE67E /* SignInViewController.swift in Sources */,
 				C37387A029B744F800286DCB /* ViewController.swift in Sources */,
+				C317643029BA038800E69495 /* HomePageViewController.swift in Sources */,
+				C317643829BA03E500E69495 /* SettingsViewController.swift in Sources */,
+				C317643C29BA13C100E69495 /* addFeedingPointViewController.swift in Sources */,
 				C373879C29B744F800286DCB /* AppDelegate.swift in Sources */,
 				C373879E29B744F800286DCB /* SceneDelegate.swift in Sources */,
+				C317643E29BA13DB00E69495 /* addAdoptAnimalViewController.swift in Sources */,
+				C3FECFD229B8CCE5000BE67E /* SignUpViewController.swift in Sources */,
+				C317643629BA03D900E69495 /* LocationViewController.swift in Sources */,
+				C317643229BA03AF00E69495 /* FeedingPointViewController.swift in Sources */,
+				C317643429BA03CA00E69495 /* NewAddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +454,7 @@
 		};
 		C37387AD29B744F900286DCB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 056DEF11C5F8BAF01AB99662 /* Pods-HelpAnimals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +483,7 @@
 		};
 		C37387AE29B744F900286DCB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 634640A54BECE1CCC7A1A0ED /* Pods-HelpAnimals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
