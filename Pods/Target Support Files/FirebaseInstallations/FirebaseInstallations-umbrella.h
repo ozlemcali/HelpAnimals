@@ -10,7 +10,6 @@
 #endif
 #endif
 
-#import "FirebaseInstallations 2.h"
 #import "FirebaseInstallations.h"
 #import "FIRInstallations.h"
 #import "FIRInstallationsAuthTokenResult.h"

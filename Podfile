@@ -8,6 +8,8 @@ target 'HelpAnimals' do
 pod 'Firebase/Auth'
 pod 'Firebase/Analytics'
 pod 'Firebase/Core'
+pod 'Firebase/CoreOnly', '9.6.0'
+pod 'FirebaseCoreExtension'
 pod 'Firebase/Firestore'
 pod 'Firebase/Storage'
 pod 'SDWebImage', '~> 5.0'

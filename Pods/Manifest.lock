@@ -800,8 +800,10 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
+  - Firebase/CoreOnly (= 9.6.0)
   - Firebase/Firestore
   - Firebase/Storage
+  - FirebaseCoreExtension
   - SDWebImage (~> 5.0)
 
 SPEC REPOS:
@@ -861,6 +863,6 @@ SPEC CHECKSUMS:
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
   SDWebImage: e5cc87bf736e60f49592f307bdf9e157189298a3
 
-PODFILE CHECKSUM: 86bb755e4c5b33cc75353045b7d39d3fd7253c4e
+PODFILE CHECKSUM: 17f660ad3ddd6d1b0c1fa9d1ccf34eeeaebc96cb
 
 COCOAPODS: 1.12.0

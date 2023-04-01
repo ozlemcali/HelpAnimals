@@ -13,11 +13,12 @@ class HomePageViewController: UIViewController,UITableViewDelegate,UITableViewDa
  
     @IBOutlet var tableView: UITableView!
     
-    var userName = [String]()
-    var userImage = [String]()
+    var userNameArray = [String]()
+    var userImageArray = [String]()
     
     
-    
+    var chosenAnimalName = ""
+    var chosenAnimalImage = ""
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -35,24 +36,27 @@ class HomePageViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         let firestoreDatabase = Firestore.firestore()
         
-        firestoreDatabase.collection("Posts").addSnapshotListener { snapshot, error in
+        firestoreDatabase.collection("Posts").order(by: "date", descending: true)
+            
+            
+            .addSnapshotListener { snapshot, error in
             
             if error != nil{
                 print(error?.localizedDescription ?? "Error!")
             }else{
                 if snapshot?.isEmpty != true && snapshot != nil {
                     
-                    self.userName.removeAll(keepingCapacity: false)
-                    self.userImage.removeAll(keepingCapacity: false)
+                    self.userNameArray.removeAll(keepingCapacity: false)
+                    self.userImageArray.removeAll(keepingCapacity: false)
                     
                     for document in snapshot!.documents {
                         
                         if let animalNames = document.get("postedName") as? String {
-                            self.userName.append(animalNames)
+                            self.userNameArray.append(animalNames)
                         }
                         
                         if let imageUrls = document.get("imageUrl") as? String {
-                            self.userImage.append(imageUrls)
+                            self.userImageArray.append(imageUrls)
                         }
                     }
                 
@@ -65,15 +69,37 @@ class HomePageViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userName.count
+        return userNameArray.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AnimalsTableViewCell
-        cell.animalNameLabel.text = userName[indexPath.row]
+        cell.animalNameLabel.text = userNameArray[indexPath.row]
         
-      cell .animalImageView.sd_setImage(with: URL(string: self.userImage[indexPath.row]))
+        cell.animalImageView.sd_setImage(with: URL(string: self.userImageArray[indexPath.row]))
+        
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        chosenAnimalName = userNameArray[indexPath.row]
+        
+        chosenAnimalImage = userImageArray[indexPath.row]
+        performSegue(withIdentifier: "HomePageToDetailVC", sender: nil)
+        
+        
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "HomePageToDetailVC" {
+                let destinationVC = segue.destination as! DetailViewController
+                destinationVC.selectedAnimalName = chosenAnimalName
+                destinationVC.selected = chosenAnimalImage
+            
+            }
+        }
 }

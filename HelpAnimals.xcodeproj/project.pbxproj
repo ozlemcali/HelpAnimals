@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9168405B336DD2D282FE6300 /* Pods_HelpAnimals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD1A591005AC6CDF8A3CD04 /* Pods_HelpAnimals.framework */; };
+		BBAA0B30A4591B88376F3DFB /* Pods_HelpAnimals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDD16C00CDBA190F85836DC /* Pods_HelpAnimals.framework */; };
 		C317643029BA038800E69495 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317642F29BA038800E69495 /* HomePageViewController.swift */; };
 		C317643229BA03AF00E69495 /* FeedingPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317643129BA03AF00E69495 /* FeedingPointViewController.swift */; };
 		C317643429BA03CA00E69495 /* NewAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317643329BA03CA00E69495 /* NewAddViewController.swift */; };
@@ -29,8 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		056DEF11C5F8BAF01AB99662 /* Pods-HelpAnimals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelpAnimals.debug.xcconfig"; path = "Target Support Files/Pods-HelpAnimals/Pods-HelpAnimals.debug.xcconfig"; sourceTree = "<group>"; };
-		634640A54BECE1CCC7A1A0ED /* Pods-HelpAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelpAnimals.release.xcconfig"; path = "Target Support Files/Pods-HelpAnimals/Pods-HelpAnimals.release.xcconfig"; sourceTree = "<group>"; };
+		41AE161A1EA30D37F476150D /* Pods-HelpAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelpAnimals.release.xcconfig"; path = "Target Support Files/Pods-HelpAnimals/Pods-HelpAnimals.release.xcconfig"; sourceTree = "<group>"; };
+		6EDD16C00CDBA190F85836DC /* Pods_HelpAnimals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelpAnimals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C317642F29BA038800E69495 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		C317643129BA03AF00E69495 /* FeedingPointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedingPointViewController.swift; sourceTree = "<group>"; };
 		C317643329BA03CA00E69495 /* NewAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAddViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		C3DD784029B8A3B100807C73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C3FECFCF29B8CC2C000BE67E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C3FECFD129B8CCE5000BE67E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		DAD1A591005AC6CDF8A3CD04 /* Pods_HelpAnimals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelpAnimals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECF4DA49AAFE33B469F2A2E7 /* Pods-HelpAnimals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelpAnimals.debug.xcconfig"; path = "Target Support Files/Pods-HelpAnimals/Pods-HelpAnimals.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9168405B336DD2D282FE6300 /* Pods_HelpAnimals.framework in Frameworks */,
+				BBAA0B30A4591B88376F3DFB /* Pods_HelpAnimals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,10 +69,18 @@
 		63D4B401C92CA2E9FCA0DC43 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				056DEF11C5F8BAF01AB99662 /* Pods-HelpAnimals.debug.xcconfig */,
-				634640A54BECE1CCC7A1A0ED /* Pods-HelpAnimals.release.xcconfig */,
+				ECF4DA49AAFE33B469F2A2E7 /* Pods-HelpAnimals.debug.xcconfig */,
+				41AE161A1EA30D37F476150D /* Pods-HelpAnimals.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8F93C7905F3889E25C175A2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EDD16C00CDBA190F85836DC /* Pods_HelpAnimals.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C31A46D329D571BC0013F0CC /* UserLogin */ = {
@@ -141,7 +149,7 @@
 				C373879A29B744F800286DCB /* HelpAnimals */,
 				C373879929B744F800286DCB /* Products */,
 				63D4B401C92CA2E9FCA0DC43 /* Pods */,
-				F015C87D4BAE6FA8DE8B3FA9 /* Frameworks */,
+				8F93C7905F3889E25C175A2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,14 +183,6 @@
 			path = HelpAnimals;
 			sourceTree = "<group>";
 		};
-		F015C87D4BAE6FA8DE8B3FA9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DAD1A591005AC6CDF8A3CD04 /* Pods_HelpAnimals.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,11 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C37387AC29B744F900286DCB /* Build configuration list for PBXNativeTarget "HelpAnimals" */;
 			buildPhases = (
-				D9A79B2DEEA8750C8DA83DA7 /* [CP] Check Pods Manifest.lock */,
+				213B5E5DD7346E3D527BA97F /* [CP] Check Pods Manifest.lock */,
 				C373879429B744F700286DCB /* Sources */,
 				C373879529B744F700286DCB /* Frameworks */,
 				C373879629B744F700286DCB /* Resources */,
-				0DE7E272C8DFC55466F19839 /* [CP] Embed Pods Frameworks */,
+				C7DF1022423668C7C4CF246A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,24 +253,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0DE7E272C8DFC55466F19839 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HelpAnimals/Pods-HelpAnimals-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HelpAnimals/Pods-HelpAnimals-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelpAnimals/Pods-HelpAnimals-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D9A79B2DEEA8750C8DA83DA7 /* [CP] Check Pods Manifest.lock */ = {
+		213B5E5DD7346E3D527BA97F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -290,6 +273,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7DF1022423668C7C4CF246A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelpAnimals/Pods-HelpAnimals-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelpAnimals/Pods-HelpAnimals-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelpAnimals/Pods-HelpAnimals-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -454,7 +454,7 @@
 		};
 		C37387AD29B744F900286DCB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 056DEF11C5F8BAF01AB99662 /* Pods-HelpAnimals.debug.xcconfig */;
+			baseConfigurationReference = ECF4DA49AAFE33B469F2A2E7 /* Pods-HelpAnimals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -483,7 +483,7 @@
 		};
 		C37387AE29B744F900286DCB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 634640A54BECE1CCC7A1A0ED /* Pods-HelpAnimals.release.xcconfig */;
+			baseConfigurationReference = 41AE161A1EA30D37F476150D /* Pods-HelpAnimals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
