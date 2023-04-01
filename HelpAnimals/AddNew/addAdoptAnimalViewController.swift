@@ -56,10 +56,6 @@ class addAdoptAnimalViewController: UIViewController, UIImagePickerControllerDel
     
     
     @IBAction func addAdoptAnimalClicked(_ sender: Any) {
-        
-        
-       
-        
         let storage = Storage.storage()
         let storageReference = storage.reference()
         

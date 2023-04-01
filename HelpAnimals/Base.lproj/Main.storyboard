@@ -394,6 +394,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Beslenme Noktası Yarat!">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addFeedingPointClicked:" destination="q1b-QT-6Ts" eventType="touchUpInside" id="tnl-Zz-pBq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjw-XY-6KH">
                                 <rect key="frame" x="130" y="578" width="142" height="35"/>
@@ -406,6 +409,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Konum Ekle!">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickedAddLocation:" destination="q1b-QT-6Ts" eventType="touchUpInside" id="wFG-hS-whJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7aQ-xV-wNa"/>
@@ -433,6 +439,8 @@
                     <connections>
                         <outlet property="addFeedingPointButton" destination="tp4-Lu-pVU" id="k5E-3B-cvW"/>
                         <outlet property="addLocationButton" destination="rjw-XY-6KH" id="HIj-ZQ-5ye"/>
+                        <outlet property="feedImageView" destination="aaX-51-Zep" id="05O-2D-vYO"/>
+                        <outlet property="feedName" destination="X3w-J0-3Ao" id="Uwr-qf-OkN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DfN-Eo-t15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -644,7 +652,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="252" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jI5-Hh-Wdg">
-                                <rect key="frame" x="5" y="145.33333333333331" width="378" height="650.66666666666663"/>
+                                <rect key="frame" x="5" y="145.33333333333331" width="378" height="650.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="110" id="G3B-dU-WYR" customClass="AnimalsTableViewCell" customModule="HelpAnimals" customModuleProvider="target">
@@ -766,6 +774,9 @@
                                 <color key="tintColor" systemColor="systemOrangeColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system" title="Geri"/>
+                                <connections>
+                                    <action selector="clickedBackButton:" destination="T8g-2x-rrm" eventType="touchUpInside" id="Ata-2K-H6S"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yaş:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOk-9d-xoH">
                                 <rect key="frame" x="16" y="448" width="39" height="31"/>
@@ -848,6 +859,7 @@
                         <outlet property="animalCommentlabel" destination="vdU-bR-4NI" id="3xG-A6-Qn6"/>
                         <outlet property="animalImageview" destination="OaS-qp-vSu" id="S4e-Ia-LwI"/>
                         <outlet property="userConnectEmaillabel" destination="jQr-3E-KdK" id="pNN-cT-Z7M"/>
+                        <segue destination="CW4-VB-hW3" kind="presentation" identifier="DetailVCtoHomePageVC" modalPresentationStyle="fullScreen" id="15f-lD-9PQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YC7-4r-9Tz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -902,7 +914,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="mYe-Z6-IZ7"/>
-        <segue reference="Ji3-eZ-vCN"/>
+        <segue reference="15f-lD-9PQ"/>
         <segue reference="dRW-eN-sfP"/>
     </inferredMetricsTieBreakers>
     <resources>

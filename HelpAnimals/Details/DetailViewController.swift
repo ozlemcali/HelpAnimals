@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet var animalCommentlabel: UILabel!
     @IBOutlet var animalAgelabel: UILabel!
     @IBOutlet var animalImageview: UIImageView!
-    
+   
     var selected = ""
     
     var selectedAnimalName = ""
@@ -31,6 +31,9 @@ class DetailViewController: UIViewController {
         
     }
     
+    @IBAction func clickedBackButton(_ sender: Any) {
+        performSegue(withIdentifier: "DetailVCtoHomePageVC", sender: nil)
+    }
     
     func getImagesFromFirestore(){
         
