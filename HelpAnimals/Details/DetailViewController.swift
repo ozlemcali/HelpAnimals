@@ -16,54 +16,25 @@ class DetailViewController: UIViewController {
     @IBOutlet var animalAgelabel: UILabel!
     @IBOutlet var animalImageview: UIImageView!
    
-    var selected = ""
-    
+    var selectedAnimalImage = ""
     var selectedAnimalName = ""
-   var userImage = [String]()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.tabBarController?.tabBar.isHidden = false
        
         animalCommentlabel.text = selectedAnimalName
-        animalImageview.sd_setImage(with: URL(string: selected))
+        animalImageview.sd_setImage(with: URL(string: selectedAnimalImage))
         
         
     }
     
     @IBAction func clickedBackButton(_ sender: Any) {
+        self.tabBarController?.tabBar.isHidden = false
         performSegue(withIdentifier: "DetailVCtoHomePageVC", sender: nil)
+       
+      
     }
-    
-    func getImagesFromFirestore(){
-        
-        let firestoreDatabase = Firestore.firestore()
-        
-        firestoreDatabase.collection("Posts").addSnapshotListener { snapshot, error in
-            
-            if error != nil{
-                print(error?.localizedDescription ?? "Error!")
-            }else{
-                if snapshot?.isEmpty != true && snapshot != nil {
-                    
-                
-                    
-                    for document in snapshot!.documents {
-                       
-                        
-                        if let imageUrls = document.get("imageUrl") as? String {
-                            self.userImage.append(imageUrls)
-                            self.animalImageview.sd_setImage(with: URL(string: self.userImage[0]))                        }
-                    }
-                
-                   
-                }
-            }
-        }
-        
-    }
-    
-    
     
 
 

@@ -19,17 +19,13 @@ class HomePageViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     var chosenAnimalName = ""
     var chosenAnimalImage = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        // Do any additional setup after loading the view.
-       
         self.navigationItem.title = "Sahiplen!"
         tableView.dataSource = self
         tableView.delegate = self
         getDataFromFirestore()
-       
-        
     }
     
     func getDataFromFirestore(){
@@ -85,12 +81,8 @@ class HomePageViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         chosenAnimalName = userNameArray[indexPath.row]
-        
         chosenAnimalImage = userImageArray[indexPath.row]
         performSegue(withIdentifier: "HomePageToDetailVC", sender: nil)
-        
-        
-        
     }
     
     
@@ -98,8 +90,12 @@ class HomePageViewController: UIViewController,UITableViewDelegate,UITableViewDa
             if segue.identifier == "HomePageToDetailVC" {
                 let destinationVC = segue.destination as! DetailViewController
                 destinationVC.selectedAnimalName = chosenAnimalName
-                destinationVC.selected = chosenAnimalImage
-            
+                destinationVC.selectedAnimalImage = chosenAnimalImage
             }
         }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getDataFromFirestore()
+    }
 }

@@ -16,6 +16,8 @@
 		C317643C29BA13C100E69495 /* addFeedingPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317643B29BA13C100E69495 /* addFeedingPointViewController.swift */; };
 		C317643E29BA13DB00E69495 /* addAdoptAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317643D29BA13DB00E69495 /* addAdoptAnimalViewController.swift */; };
 		C317644229BA193D00E69495 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317644129BA193D00E69495 /* DetailViewController.swift */; };
+		C33424DD29D99FA300BE91E2 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33424DC29D99FA300BE91E2 /* FeedTableViewCell.swift */; };
+		C33424DF29D9A98100BE91E2 /* DetailFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33424DE29D9A98100BE91E2 /* DetailFeedViewController.swift */; };
 		C3434B7329D6D42D00D4A877 /* AnimalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3434B7229D6D42D00D4A877 /* AnimalsTableViewCell.swift */; };
 		C373879C29B744F800286DCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C373879B29B744F800286DCB /* AppDelegate.swift */; };
 		C373879E29B744F800286DCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C373879D29B744F800286DCB /* SceneDelegate.swift */; };
@@ -39,6 +41,8 @@
 		C317643B29BA13C100E69495 /* addFeedingPointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addFeedingPointViewController.swift; sourceTree = "<group>"; };
 		C317643D29BA13DB00E69495 /* addAdoptAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addAdoptAnimalViewController.swift; sourceTree = "<group>"; };
 		C317644129BA193D00E69495 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C33424DC29D99FA300BE91E2 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		C33424DE29D9A98100BE91E2 /* DetailFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFeedViewController.swift; sourceTree = "<group>"; };
 		C3434B7229D6D42D00D4A877 /* AnimalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsTableViewCell.swift; sourceTree = "<group>"; };
 		C373879829B744F800286DCB /* HelpAnimals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpAnimals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C373879B29B744F800286DCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				C317643129BA03AF00E69495 /* FeedingPointViewController.swift */,
+				C33424DC29D99FA300BE91E2 /* FeedTableViewCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				C317644129BA193D00E69495 /* DetailViewController.swift */,
+				C33424DE29D9A98100BE91E2 /* DetailFeedViewController.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -303,6 +309,7 @@
 				C3434B7329D6D42D00D4A877 /* AnimalsTableViewCell.swift in Sources */,
 				C3FECFD029B8CC2C000BE67E /* SignInViewController.swift in Sources */,
 				C37387A029B744F800286DCB /* ViewController.swift in Sources */,
+				C33424DD29D99FA300BE91E2 /* FeedTableViewCell.swift in Sources */,
 				C317643029BA038800E69495 /* HomePageViewController.swift in Sources */,
 				C317643829BA03E500E69495 /* SettingsViewController.swift in Sources */,
 				C317643C29BA13C100E69495 /* addFeedingPointViewController.swift in Sources */,
@@ -313,6 +320,7 @@
 				C317643629BA03D900E69495 /* LocationViewController.swift in Sources */,
 				C317643229BA03AF00E69495 /* FeedingPointViewController.swift in Sources */,
 				C317643429BA03CA00E69495 /* NewAddViewController.swift in Sources */,
+				C33424DF29D9A98100BE91E2 /* DetailFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
