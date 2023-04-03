@@ -28,6 +28,12 @@ class HomePageViewController: UIViewController,UITableViewDelegate,UITableViewDa
         getDataFromFirestore()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getDataFromFirestore()
+    }
+    
+    
     func getDataFromFirestore(){
         
         let firestoreDatabase = Firestore.firestore()
@@ -94,8 +100,5 @@ class HomePageViewController: UIViewController,UITableViewDelegate,UITableViewDa
             }
         }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        getDataFromFirestore()
-    }
+   
 }

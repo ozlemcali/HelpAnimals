@@ -28,14 +28,6 @@ class DetailViewController: UIViewController {
         
         
     }
-    
-    @IBAction func clickedBackButton(_ sender: Any) {
-        self.tabBarController?.tabBar.isHidden = false
-        performSegue(withIdentifier: "DetailVCtoHomePageVC", sender: nil)
-       
-      
-    }
-    
-
+   
 
 }

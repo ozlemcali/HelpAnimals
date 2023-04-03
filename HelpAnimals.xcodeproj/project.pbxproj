@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BBAA0B30A4591B88376F3DFB /* Pods_HelpAnimals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDD16C00CDBA190F85836DC /* Pods_HelpAnimals.framework */; };
+		C3120F8C29DAB9F40038AA63 /* LocationModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3120F8A29DAB9F30038AA63 /* LocationModel.xcdatamodeld */; };
 		C317643029BA038800E69495 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317642F29BA038800E69495 /* HomePageViewController.swift */; };
 		C317643229BA03AF00E69495 /* FeedingPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317643129BA03AF00E69495 /* FeedingPointViewController.swift */; };
 		C317643429BA03CA00E69495 /* NewAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317643329BA03CA00E69495 /* NewAddViewController.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		41AE161A1EA30D37F476150D /* Pods-HelpAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelpAnimals.release.xcconfig"; path = "Target Support Files/Pods-HelpAnimals/Pods-HelpAnimals.release.xcconfig"; sourceTree = "<group>"; };
 		6EDD16C00CDBA190F85836DC /* Pods_HelpAnimals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelpAnimals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3120F8B29DAB9F40038AA63 /* LocationModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocationModel.xcdatamodel; sourceTree = "<group>"; };
 		C317642F29BA038800E69495 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		C317643129BA03AF00E69495 /* FeedingPointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedingPointViewController.swift; sourceTree = "<group>"; };
 		C317643329BA03CA00E69495 /* NewAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAddViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				C37387A629B744F900286DCB /* LaunchScreen.storyboard */,
 				C37387A929B744F900286DCB /* Info.plist */,
 				C3DD784029B8A3B100807C73 /* GoogleService-Info.plist */,
+				C3120F8A29DAB9F30038AA63 /* LocationModel.xcdatamodeld */,
 			);
 			path = HelpAnimals;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				C3FECFD229B8CCE5000BE67E /* SignUpViewController.swift in Sources */,
 				C317643629BA03D900E69495 /* LocationViewController.swift in Sources */,
 				C317643229BA03AF00E69495 /* FeedingPointViewController.swift in Sources */,
+				C3120F8C29DAB9F40038AA63 /* LocationModel.xcdatamodeld in Sources */,
 				C317643429BA03CA00E69495 /* NewAddViewController.swift in Sources */,
 				C33424DF29D9A98100BE91E2 /* DetailFeedViewController.swift in Sources */,
 			);
@@ -540,6 +544,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C3120F8A29DAB9F30038AA63 /* LocationModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C3120F8B29DAB9F40038AA63 /* LocationModel.xcdatamodel */,
+			);
+			currentVersion = C3120F8B29DAB9F40038AA63 /* LocationModel.xcdatamodel */;
+			path = LocationModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C373879029B744F700286DCB /* Project object */;
 }

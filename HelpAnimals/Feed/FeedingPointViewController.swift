@@ -8,15 +8,21 @@
 import UIKit
 import Firebase
 import SDWebImage
+import CoreData
 class FeedingPointViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
     var userFeedNameArray = [String]()
     var userFeedImageArray = [String]()
+    var idArray = [UUID]()
     
     var chosenFeedName = ""
     var chosenFeedImage = ""
-
+    var chosenTitleId : UUID?
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = false
@@ -24,6 +30,13 @@ class FeedingPointViewController: UIViewController,UITableViewDelegate,UITableVi
         tableView.delegate = self
         tableView.dataSource = self
         getFeedDataFromFirestore()
+        getLocationData()
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(getLocationData), name: NSNotification.Name("newPlace"), object: nil)
     }
     
     
@@ -57,6 +70,42 @@ class FeedingPointViewController: UIViewController,UITableViewDelegate,UITableVi
         
     }
     
+    
+    @objc func getLocationData() {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Places")
+        request.returnsObjectsAsFaults = false
+        do {
+            let results = try context.fetch(request)
+            
+            if results.count > 0 {
+                
+                
+                self.idArray.removeAll(keepingCapacity: false)
+                
+                for result in results as! [NSManagedObject] {
+                    
+                    
+                    
+                    if let id = result.value(forKey: "id") as? UUID {
+                        self.idArray.append(id)
+                    }
+                    
+                    tableView.reloadData()
+                    
+                }
+                
+            }
+            
+            
+        } catch {
+            print("error")
+        }
+        
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userFeedNameArray.count
     }
@@ -74,21 +123,21 @@ class FeedingPointViewController: UIViewController,UITableViewDelegate,UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         chosenFeedName = userFeedNameArray[indexPath.row]
         chosenFeedImage = userFeedImageArray[indexPath.row]
+        chosenTitleId = idArray[indexPath.row]
+        
         performSegue(withIdentifier: "FeedingPointToDetailFeedVC", sender: nil)
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "FeedingPointToDetailFeedVC" {
-                let destinationVC = segue.destination as! DetailFeedViewController
-                destinationVC.selectedFeedName = chosenFeedName
-                destinationVC.selectedFeedImage = chosenFeedImage
-            }
+        if segue.identifier == "FeedingPointToDetailFeedVC" {
+            let destinationVC = segue.destination as! DetailFeedViewController
+            destinationVC.selectedFeedName = chosenFeedName
+            destinationVC.selectedFeedImage = chosenFeedImage
+            destinationVC.selectedTitleID = chosenTitleId
         }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        getFeedDataFromFirestore()
     }
+    
+    
     
 }
