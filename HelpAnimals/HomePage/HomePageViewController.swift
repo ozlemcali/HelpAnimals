@@ -13,6 +13,7 @@ class HomePageViewController: UIViewController,UITableViewDelegate,UITableViewDa
  
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet var searchTextField: UITextField!
     var userNameArray = [String]()
     var userImageArray = [String]()
     

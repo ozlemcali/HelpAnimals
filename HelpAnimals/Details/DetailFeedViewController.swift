@@ -29,7 +29,7 @@ class DetailFeedViewController: UIViewController,MKMapViewDelegate,CLLocationMan
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = false
-        title = "beslenme"
+
         detailFeedName.text = selectedFeedName
         detailFeedImageView.sd_setImage(with: URL(string: selectedFeedImage))
         

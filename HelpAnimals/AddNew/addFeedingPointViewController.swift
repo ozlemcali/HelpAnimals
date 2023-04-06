@@ -2,6 +2,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 import MapKit
 import CoreLocation
 import CoreData
@@ -91,7 +92,7 @@ class addFeedingPointViewController: UIViewController,UIImagePickerControllerDel
     // MARK: - Add Feeding Point
     @IBAction func addFeedingPointClicked(_ sender: Any) {
         
-        //Chose Images
+        //Choose Images
         let storage = Storage.storage()
         let storageReference = storage.reference()
         
@@ -127,7 +128,7 @@ class addFeedingPointViewController: UIViewController,UIImagePickerControllerDel
                                 }else{
                                     self.feedImageView.image = UIImage(named:"p3.png")
                                     self.feedName.text = ""
-                                    self.performSegue(withIdentifier: "addFeedingPointVCtoFeedingPointVC", sender: nil)
+                                    self.performSegue(withIdentifier: "addFeedingPointToFeedingPointVC", sender: nil)
                                 }
                             })
                             

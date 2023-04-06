@@ -9,29 +9,33 @@ import UIKit
 import Firebase
 import SDWebImage
 import CoreData
-class FeedingPointViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class FeedingPointViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
     
     @IBOutlet var tableView: UITableView!
+    
+    @IBOutlet var searchTextField: UITextField!
+    
     var userFeedNameArray = [String]()
     var userFeedImageArray = [String]()
     var idArray = [UUID]()
+
     
     var chosenFeedName = ""
     var chosenFeedImage = ""
     var chosenTitleId : UUID?
     
-    
-    
+    var filteredUserFeedNameArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = false
-        self.title = "Beslenme Noktaları" //çalışmıyor.
+        self.title = "Beslenme Noktaları"
         tableView.delegate = self
         tableView.dataSource = self
         getFeedDataFromFirestore()
         getLocationData()
         
+        searchTextField.delegate = self
         
     }
     
@@ -92,6 +96,7 @@ class FeedingPointViewController: UIViewController,UITableViewDelegate,UITableVi
                     
                     if let id = result.value(forKey: "id") as? UUID {
                         self.idArray.append(id)
+                     
                     }
                     
                     tableView.reloadData()
@@ -107,13 +112,26 @@ class FeedingPointViewController: UIViewController,UITableViewDelegate,UITableVi
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userFeedNameArray.count
+        if let searchText = searchTextField.text, !searchText.isEmpty {
+            return filteredUserFeedNameArray.count
+        } else {
+            return userFeedNameArray.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FeedTableViewCell
-        cell.feedImageView.sd_setImage(with: URL(string: self.userFeedImageArray[indexPath.row]))
-        cell.feedLocationLabel.text = userFeedNameArray[indexPath.row]
+        
+        if let searchText = searchTextField.text, !searchText.isEmpty {
+            
+            cell.feedLocationLabel.text = filteredUserFeedNameArray[indexPath.row]
+        }else{
+            cell.feedImageView.sd_setImage(with: URL(string: self.userFeedImageArray[indexPath.row]))
+            cell.feedLocationLabel.text = userFeedNameArray[indexPath.row]
+            
+        }
+        
+        
         
         return cell
         
@@ -137,7 +155,36 @@ class FeedingPointViewController: UIViewController,UITableViewDelegate,UITableVi
             destinationVC.selectedTitleID = chosenTitleId
         }
     }
+ 
+    @IBAction func searchButton(_ sender: UIButton) {
+        searchTextField.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchTextField.endEditing(true)
+        return true
+    }
     
     
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != nil && !textField.text!.isEmpty {
+            return true
+        } else {
+            textField.placeholder = "Type something"
+            return false
+        }
+    }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let searchText = searchTextField.text, !searchText.isEmpty {
+            filteredUserFeedNameArray = userFeedNameArray.filter { $0.lowercased().contains(searchText.lowercased())}
+        } else {
+            filteredUserFeedNameArray = userFeedNameArray
+        }
+        if filteredUserFeedNameArray.count == 0 {
+               filteredUserFeedNameArray = userFeedNameArray
+           }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }
